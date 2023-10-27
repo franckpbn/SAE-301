@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    :root {
+        --url: url("../asset/background.png")
+    }
+}
+
+
+
+@layer components {
+
+    .nav_btn {
+        @apply text-white font-bold text-xl
+    }
+
+    .btn {
+        @apply flex justify-center bg-grey px-2 py-4 rounded-lg text-white font-bold text-lg
+    }
+
+    .btn_no_stocks {
+        @apply flex justify-center bg-red-500 px-2 py-4 rounded-lg text-white font-bold text-lg
+    }
+
+    .li_center {
+        @apply flex flex-col gap-2 items-center
+    }
+
+    .btn_connection{
+        @apply bg-white text-yellow rounded-full p-4
+    }
+
+    .btn_inscription {
+        @apply bg-yellow text-white rounded-full p-4
+    }
+    .footer {
+        @apply bg-yellow flex items-center justify-center p-2 w-10 h-10 rounded-lg
+    }
+
+    .footer_md {
+        @apply hidden md:flex mt-4 text-sm items-start font-normal flex-col gap-2
+    }
+}
+

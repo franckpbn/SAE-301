@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <title>LEGO</title>
+</head>
+<body class="bg-white">
+
+
+    <div class="flex px-4 items-center justify-between bg-red text-white h-28">
+        <img class="w-36" src="/asset/Lego.png" alt="Logo">
+        <section class="hidden xl:block">
+            <ul class="flex flex-row items-center gap-4 nav_btn">
+                <li><a class="hover:border-b-2 pb-1 border-white" href="">PRODUITS</a></li>
+                <li><a class="hover:border-b-2 pb-1 border-white" href="">BLOCS</a></li>
+                <li><a class="hover:border-b-2 pb-1 border-white" href="">NINJAGO</a></li>
+                <li><a class="hover:border-b-2 pb-1 border-white" href="">DISNEY</a></li>
+                <li><a class="hover:border-b-2 pb-1 border-white" href="">PANIER</a></li>
+                <li><a class="ml-6 btn_connection">Connexion</a></li>
+                <li><a class="btn_inscription">Inscription</a></li>
+            </ul>  
+        </section>
+    <div class="xl:hidden items-center">
+        <input type="checkbox" class="hidden" id="menuToggle" />
+        <label for="menuToggle" class="fixed top-0 right-0 p-7 cursor-pointer z-10 xl:hidden">
+          <span class="xl:hidden">
+            <img class="" src="/asset/burger.png" alt="">
+          </span>
+        </label>
+        <div
+          class="menu w-3/4 h-screen fixed top-0 right-0 bg-red transform translate-x-full xl:hidden transition-transform">
+          <ul class="pt-24 text-2xl gap-4 flex flex-col items-center nav_btn">
+            <li class="mb-4"><a href="#">PRODUITS</a></li>
+            <li class="mb-4"><a href="#">BLOCS</a></li>
+            <li class="mb-4"><a href="#">NINJAGO</a></li>
+            <li class="mb-4"><a href="#">DISNEY</a></li>
+            <li class="mb-4"><a href="#"><p>PANIER</p></li></a>
+            <li class="mb-8"><a class="btn_connection" href="#">Connexion</a></li>
+            <li><a class="btn_inscription" href="#">Inscription</a></li>
+          </ul>
+        </div>
+      </div>
+  
+    </div>
+
+
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const menu = document.querySelector(".menu");
+
+menuToggle.addEventListener("change", () => {
+  if (menuToggle.checked) {
+    menu.classList.remove("translate-x-full");
+  } else {
+    menu.classList.add("translate-x-full");
+  }
+});
+</script>
+
+
+<p>Card</p>
+
+    <section class=" bg-white w-fit border border-grey-border p-4">
+      <img class="w-72" src="/asset/Produit/Blocs/boite_lego.png" alt="">
+      <section class="flex flex-col">
+          <ul class="flex flex-col gap-1 pb-1">
+              <li class="flex flex-col gap-0">
+                  <p class="text-lg font-bold">Lego boîte</p>
+                  <p class="text-sm">1-99ans</p>
+              </li>
+              <li class="flex flex-raw justify-between font-bold text-lg">
+                  <p>999.99€</p>
+                  <p>En Stock</p>
+              </li>
+          </ul>
+          <section class="btn">
+              <button> Ajouter au panier </button>
+          </section>
+      </section>
+    </section>
+<p>No Stock</p>
+    <section class=" bg-white w-fit border border-grey-border p-4">
+        <img class="w-72 hover:scale-110 transition delay-100 duration-300" src="/asset/Produit/Blocs/boite_lego.png" alt="">
+        <section class="flex flex-col">
+            <ul class="flex flex-col gap-1 pb-1">
+                <li class="flex flex-col gap-0">
+                    <p class="text-lg font-bold">Lego boîte</p>
+                    <p class="text-sm">1-99ans</p>
+                </li>
+                <li class="flex flex-raw justify-between font-bold text-lg">
+                    <p>999.99€</p>
+                    <p class="text-red-500">Pas en Stock</p>
+                </li>
+            </ul>
+            <section class="btn_no_stocks">
+                <button> Non disponible </button>
+            </section>
+        </section>
+      </section>
+
+
+      <h2>Card mobile</h2>
+
+
+      <div class="grid grid-cols-2 gap-4 md:gap-0 md:grid-cols-3">
+        <div class="border-gray-600 flex flex-col gap-2 border-2 w-full p-4">
+            <img class="w-full" src="/asset/produit_img.png" alt="">
+            <section class="flex flex-row md:flex-col justify-between text-black">
+                <p class="text-xl">LEGO</p>
+                <p class="hidden text-xs md:block">1-99ans</p>
+                <section class="md:flex md:flex-row md:justify-between">
+                    <p>149.99€</p>
+                    <p class="hidden md:block">En stock</p>
+                </section>
+            </section>
+            <button class="bg-gray-500 p-2 rounded-lg text-white">Voir plus</button>
+        </div>
+        <div class="border-gray-600 flex flex-col gap-2 border-2 w-full p-4">
+            <img class="w-full" src="/asset/produit_img.png" alt="">
+            <section class="flex flex-row md:flex-col justify-between text-black">
+                <p class="text-xl">LEGO</p>
+                <p class="hidden md:block text-xs">1-99ans</p>
+                <section class="md:flex md:flex-row md:justify-between">
+                    <p>149.99€</p>
+                    <p class="hidden md:block">En stock</p>
+                </section>
+            </section>
+            <button class="bg-gray-500 p-2 rounded-lg text-white">Voir plus</button>
+        </div>
+        <div class="border-gray-600 flex flex-col gap-2 border-2 w-full p-4">
+            <img class="w-full" src="/asset/produit_img.png" alt="">
+            <section class="flex flex-row md:flex-col justify-between text-black">
+                <p class="text-xl">LEGO</p>
+                <p class="hidden md:block text-xs">1-99ans</p>
+                <section class="md:flex md:flex-row md:justify-between">
+                    <p>149.99€</p>
+                    <p class="hidden md:block">En stock</p>
+                </section>
+            </section>
+            <button class="bg-gray-500 p-2 rounded-lg text-white">Voir plus</button>
+        </div>
+        <div class="border-gray-600 flex flex-col gap-2 border-2 w-full p-4">
+            <img class="w-full" src="/asset/produit_img.png" alt="">
+            <section class="flex flex-row md:flex-col md:gap-0 justify-between text-black">
+                <p class="text-xl">LEGO</p>
+                <p class="hidden md:block text-xs">1-99ans</p>
+                <section class="md:flex md:flex-row md:justify-between">
+                    <p>149.99€</p>
+                    <p class="hidden md:block">En stock</p>
+                </section>
+            </section>
+            <button class="bg-gray-500 p-2 rounded-lg md:hover:scale-110 text-white">Voir plus</button>
+        </div>
+
+    </div>
+
+
+<p>Produit</p>
+
+<section class="flex flex-row gap-8 w-fit">
+    <section class="flex p-12 border-2">
+        <img src="/asset/Produit/Blocs/boite_lego.png" alt="boite légo">
+    </section>
+    <section class="flex flex-col justify-center gap-4">
+        <h2 class="text-4xl">BOITE DE BRICK</h2>
+        <p class="text-xl font-bold">999,99 €</p>
+        <p class="max-w-lg">Place à la construction avec cette grande boîte de briques LEGO® classiques de 33 couleurs différentes. Avec de nombreuses fenêtres et portes différentes, ainsi que des éléments spéciaux pour t'inspirer, tu peux vraiment laisser libre cours à ton imagination.</p>
+        <ul class="flex flex-row gap-4 justify-between">
+            <li class="li_center">
+                <p class="text-xl font-extrabold">1-99</p>
+                <p>Ages</p>
+            </li>
+            <li class="li_center">
+                <p class="text-xl font-extrabold">790</p>
+                <p>Nombre de piece</p>
+            </li>
+            <li class="li_center">
+                <p class="text-xl font-extrabold">375</p>
+                <p>Points Insiders</p>
+            </li>
+            <li class="li_center">
+                <p class="text-xl font-extrabold">106998</p>
+                <p>Numéro d'article</p>
+            </li> 
+        </ul>
+        <section class="btn w-72">
+            <button>Ajouter au panier</button>
+        </section>
+    </section>
+</section>
+
+<p>Accueil page</p>
+
+<section class="bg-background bg-cover aspect-video flex flex-col justify-center text-white">
+    <section class="pl-20 flex flex-col gap-2">
+        <h2 class="text-7xl font-medium	">L'HISTOIRE LEGO</h2>
+        <p class="w-96 text-lg leading-5 font-bold">Fondée en 1932 par Ole Kirk Kristiansen et basée sur l'emblématique brique LEGO, elle est l'un des principaux fabricants mondiaux de matériel de jeu.</p>
+    </section>
+</section>
+
+<section class="h-96 flex flex-col items-center gap-4 bg-white">
+    <h2 class="text-grey">CATEGORIES</h2>
+    <ul class="grid grid-cols-3 gap-4 text-white">
+        <li class="bg-blue w- aspect-square flex flex-col items-center justify-center">
+            <p>DISNEY</p>
+            <img class="w-50 h-50" src="/asset/Catégories/categorie_disney.png" alt="">
+        </li>
+        <li class="bg-red-500 aspect-square flex flex-col items-center justify-center">
+            <p>BLOCKS</p>
+            <img class="w-50 h-50" src="/asset/Catégories/categorie_brick.png" alt="">
+        </li>
+        <li class="bg-yellow aspect-square flex flex-col items-center justify-center">
+            <p>NINJAGO</p>
+            <img class="w-50 h-50" src="/asset/Catégories/categorie_nijago.png" alt="">
+        </li>
+    </ul>
+</section>
+
+
+<div class="flex flex-col gap-4 items-center text-center">
+    <div class="md:flex md:flex-row md:justify-between md:mb-8 md:w-full">
+        <section class="md:flex md:flex-col md:gap-6  items-start">
+            <img class="w-fit" src="/asset/Lego.png" alt="">
+            <p class="hidden md:block">Apprendre par le jeu</p>
+            <ul class="md:flex items-center gap-4 flex-row hidden ">
+                <li class="footer"><img src="/asset/Facebook.png" alt=""></li>
+                <li class="footer"><img src="/asset/Twitter.png" alt=""></li>
+                <li class="footer"><img src="/asset/Instagram.png" alt=""></li>
+                <li class="footer"><img src="/asset/YouTube.png" alt=""></li>
+            </ul>
+        </section>
+        <ul class="flex flex-col md:ml-12 md:w-full md:flex-row md:w-2xl md:gap-8 md:items-start md:justify-between font-bold items-center gap-4">
+            <li class="">
+                <p>A PROPOS DE NOUS</p>
+                    <section class="footer_md">
+                        <p>Disney</p>
+                        <p>Blocs</p>
+                        <p>Ninjago</p>
+                    </section>
+            </li>
+            <li>
+                <p>COMPANIE</p>
+                        <section class="footer_md">
+                            <p>A propos</p>
+                            <p>Contact</p>
+                            <p>Carrière</p>
+                            <p>Culture</p>
+                            <p>Blog</p>
+                        </section>
+            </li>
+            <li class="flex flex-col items-start">
+                <p>SUPPORT</p>
+                    <section class="footer_md">
+                        <p>Instructions de montage</p>
+                        <p>Pièces manquantes</p>
+                        <p>Retours</p>
+                        <p>Modes de paiement</p>
+                        <p>Conditions Générales</p>
+                    </section>
+            </li>
+            <li>
+                <p>PRODUITS</p>
+                    <section class="footer_md">
+                        <p>Disney</p>
+                        <p>Blocs</p>  
+                        <p>Ninjago</p>
+                    </section>
+            </li>
+        </ul>
+    </div>
+    <ul class="md:hidden flex items-center gap-4 flex-row ">
+        <li class="footer"><img src="/asset/Facebook.png" alt=""></li>
+        <li class="footer"><img src="/asset/Twitter.png" alt=""></li>
+        <li class="footer"><img src="/asset/Instagram.png" alt=""></li>
+        <li class="footer"><img src="/asset/YouTube.png" alt=""></li>
+    </ul>
+    <p class="w-4/8 text-sm">LEGO System A/S, DK-7190 Billund, Denmark. Vous devez être âgé(e) d’au moins 18 ans pour faire des achats en ligne.  L'utilisation de ce site implique que vous acceptez les conditions d'utilisation.</p>
+</div>
+
+
+
+
+</body>
+</html>
